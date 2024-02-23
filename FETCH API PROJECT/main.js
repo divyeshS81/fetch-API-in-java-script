@@ -12,16 +12,19 @@ fetch('https://fakestoreapi.com/products')
                   const front = document.createElement('div');
                   front.classList.add('front');
                   
+                  const imgContainer = document.createElement('div');
+                  imgContainer.classList.add('img-container');
+
                   const img = document.createElement('img');
                   img.src = product.image;
                   img.alt = product.title;
                   img.style.width = '200px';
                   img.style.height = '200px';
-                  img.style.alignItems = 'center';
-                  front.appendChild(img);
+                  imgContainer.appendChild(img);
+                  front.appendChild(imgContainer);
 
                   const title = document.createElement('p');
-                  title.textContent = product.title;
+                  title.textContent = `Title: ${product.title}`;
                   front.appendChild(title);
 
                   const category = document.createElement('p');
