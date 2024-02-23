@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FETCH DATA FORM API</title>
+
+      <style>
+            .card {
+                  width: 300px;
+                  height: 400px;
+                  perspective: 1000px;
+                  float: left;
+                  margin: 10px;
+            }
+
+            .card-inner {
+                  width: 100%;
+                  height: 100%;
+                  transition: transform 0.8s;
+                  transform-style: preserve-3d;
+            }
+
+            .card:hover .card-inner {
+                  transform: rotateY(180deg);
+            }
+
+            .front,
+            .back {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  backface-visibility: hidden;
+                  border: 1px solid black;
+                  border-radius: 5px;
+            }
+
+            .back {
+                  transform: rotateY(180deg);
+            }
+      </style>
+</head>
+
+<body>
+
+      <div id="productContainer"></div>
+
+
+
+      <script src="./main.js"></script>
+</body>
+
+</html>
